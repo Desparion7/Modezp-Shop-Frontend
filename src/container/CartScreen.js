@@ -60,7 +60,7 @@ const CartScreen = () => {
 		<>
 			{cartItems.length < 1 ? (
 				<div className='empty-cart margin-section'>
-					<img src='./images/cart.png' alt='cart'></img>
+					<img src='/Modezp-Shop-Frontend/images/cart.png' alt='cart'></img>
 					<Link to='/'>
 						<button className='btn'>Dobierz produkty</button>
 					</Link>

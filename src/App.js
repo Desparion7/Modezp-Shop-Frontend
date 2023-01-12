@@ -30,7 +30,7 @@ function App() {
 			<Navbar></Navbar>
 			<main>
 				<Routes>
-					<Route path='/' element={<Home />}></Route>
+					<Route path='/Modezp-Shop-Frontend/' element={<Home />}></Route>
 					<Route
 						path='/category/:category'
 						element={<Home />}
