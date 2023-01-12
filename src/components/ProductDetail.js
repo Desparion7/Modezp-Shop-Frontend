@@ -4,13 +4,11 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { cartActions } from '../store';
 import store from '../store';
-import Modal from '../UI/Modal';
 import './ProductDetail.css';
 
 const ProductDetail = ({ product }) => {
 	const navigate = useNavigate();
 	const dispatch = useDispatch();
-	const [showModal, setShowModal] = useState(false);
 
 	const [size, setSize] = useState('');
 
@@ -74,34 +72,17 @@ const ProductDetail = ({ product }) => {
 			JSON.stringify(store.getState().cart)
 		);
 	};
-	const navigateHandler = () => {
-		navigate('/cart');
-	};
-	const closeModalHandler = () => {
-		setShowModal(false);
-	};
 
 	const buyByCartHandler = () => {
 		navigate('/cart');
 		addToCart();
 	};
-	const addToCartHandler = () => {
-		setShowModal(true);
+	const addToCartHandler = () => {	
 		addToCart();
 	};
 
 	return (
 		<>
-			{showModal && (
-				<Modal
-					modalTitle={'Produkt został dodany do koszyka!'}
-					modalText={'Czy chcesz przejść do koszyka?'}
-					rightBtn={navigateHandler}
-					rightBtnText={'Tak'}
-					leftBtn={closeModalHandler}
-					leftBtnText={'Nie'}
-				></Modal>
-			)}
 			<div className='margin-section'>
 				<div className='box-shadow-productdetail'>
 					<div className='detail-title'>{product.name}</div>
