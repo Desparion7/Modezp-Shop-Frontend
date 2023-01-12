@@ -1,0 +1,119 @@
+.change-product {
+	min-height: 75vh;
+}
+.change-product-form-box {
+	display: flex;
+	justify-content: center;
+}
+.change-product-form {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+.change-product-form-title {
+	text-align: center;
+}
+.change-product-form-id {
+	margin: 1rem 0;
+	text-align: center;
+}
+
+.change-product-form-options {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.change-product-form-options label {
+	margin: 0.5rem 0;
+}
+.change-product-form-options input {
+	margin: 0.5rem 0;
+	padding: 0.5rem;
+	min-width: 300px;
+}
+.change-product-form-options textarea {
+	margin: 0.5rem 0;
+	padding: 0.5rem;
+	min-width: 600px;
+	min-height: 200px;
+}
+
+.change-product-checbox {
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+}
+.change-product-btn {
+	font-size: 1rem;
+	border-radius: 5px;
+	border: none;
+	padding: 0.7rem 1rem;
+	margin: 1rem 0;
+	background: var(--buttons-color);
+	transition: background 0.3s;
+	cursor: pointer;
+}
+.change-product-btn:hover {
+	background: var(--buttons-hover-color);
+}
+.photo-upload {
+	display: flex;
+	justify-content: space-around;
+	gap: 10px;
+	flex-direction: column;
+	width: 300px;
+	height: 240px;
+}
+.photo-upload img {
+	width: 100%;
+	height: 100%;
+	object-fit: scale-down;
+}
+.photo-upload-box {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+.photo-upload-box label {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100px;
+	height: 100px;
+	border: 1px rgba(196, 195, 195, 0.867) solid;
+	cursor: pointer;
+}
+.upload-photo-remove {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 0.2rem;
+	border: none;
+	cursor: pointer;
+	background-color: rgba(199, 197, 197, 0.3);
+	transition: background-color 0.3s;
+}
+.upload-photo-remove:hover {
+	background-color: rgba(40, 40, 40, 0.676);
+}
+#upload-photo-1,
+#upload-photo-2,
+#upload-photo-3,
+#upload-photo-4 {
+	opacity: 0;
+	position: absolute;
+	z-index: -1;
+}
+
+@media screen and (max-width: 660px) {
+	.change-product-form-options textarea {
+		min-width: 400px;
+	}
+}
+@media screen and (max-width: 430px) {
+	.change-product-form-options textarea {
+		min-width: 300px;
+	}
+}

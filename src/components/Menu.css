@@ -1,0 +1,45 @@
+.menu {
+	position: absolute;
+	margin: 0.5rem 0;
+	padding: 1.5rem;
+	font-size: 1.2rem;
+	right: 0;
+	top: 50px;
+	background: var(--main-color);
+	text-align: center;
+	border-radius: 5px;
+	z-index: 1000;
+	width: 250px;
+}
+.menu span {
+	color: var(--buttons-hover-color);
+	cursor: pointer;
+}
+.menu-links {
+	text-align: start;
+	padding: 0.5rem 1rem 0 1rem;
+}
+.menu-link {
+	display: block;
+	text-decoration: none;
+	color: var(--font-color);
+	margin-bottom: 1rem;
+	font-size: 1rem;
+}
+.menu-link:hover {
+	color: var(--buttons-hover-color);
+}
+.menu-link-register {
+	text-decoration: none;
+	color: var(--buttons-hover-color);
+	transition: text-decoration 10s;
+}
+.menu-link-register:hover {
+	text-decoration: underline;
+}
+
+@media screen and (max-width: 500px) {
+	.menu {
+		font-size: 1rem;
+	}
+}
