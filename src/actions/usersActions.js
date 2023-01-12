@@ -11,7 +11,7 @@ import {
 } from '../store';
 import store from '../store';
 
-const url='https://nice-underwear-fly.cyclic.app/'
+const url='https://nice-underwear-fly.cyclic.app'
 
 export const login = (email, password) => {
 	return (dispatch) => {

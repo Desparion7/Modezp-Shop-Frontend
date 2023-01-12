@@ -8,7 +8,7 @@ import {
 } from '../store';
 import axios from 'axios';
 
-const url='https://nice-underwear-fly.cyclic.app/'
+const url='https://nice-underwear-fly.cyclic.app'
 
 export const createOrder = (order) => {
 	return (dispatch, getState) => {
