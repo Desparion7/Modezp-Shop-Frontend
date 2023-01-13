@@ -18,7 +18,7 @@ const LoginScreen = () => {
 
 	useEffect(() => {
 		if (userDetailsInfo) {
-			navigate('/');
+			navigate('/Modezp-Shop-Frontend/');
 		}
 	}, [navigate, userDetailsInfo]);
 

@@ -13,12 +13,12 @@ const SearchBox = () => {
 	const submitHandler = (e) => {
 		e.preventDefault();
 		if (keyword === '') {
-			navigate(`/`);
+			navigate(`/Modezp-Shop-Frontend/`);
 		} else {
 			if (category) {
-				navigate(`/category/${category}/search/${keyword}`);
+				navigate(`/Modezp-Shop-Frontend/category/${category}/search/${keyword}`);
 			} else {
-				navigate(`/search/${keyword}`);
+				navigate(`/Modezp-Shop-Frontend/search/${keyword}`);
 			}
 		}
 	};

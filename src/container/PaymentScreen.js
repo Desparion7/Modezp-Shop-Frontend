@@ -30,7 +30,7 @@ const PaymentScreen = () => {
 	const submitHandler = (e) => {
 		e.preventDefault();
 		dispatch(savePaymentMethod(paymentMethod));
-		navigate('/placeorder');
+		navigate('/Modezp-Shop-Frontend/placeorder');
 	};
 	return (
 		<div className='paymentscreen margin-section'>
@@ -47,7 +47,7 @@ const PaymentScreen = () => {
 					<div className='payment-box-method'>
 						<div>
 							<input
-								src='./images/pp_cc_mark_111x69.jpg'
+								src='/Modezp-Shop-Frontend/images/pp_cc_mark_111x69.jpg'
 								type='image'
 								label='PayPal or Credit Card'
 								id='PayPal'
@@ -63,7 +63,7 @@ const PaymentScreen = () => {
 						<div>
 							<input
 								type='image'
-								src='./images/PAYU_LOGO_LIME-990x640.png'
+								src='/Modezp-Shop-Frontend/images/PAYU_LOGO_LIME-990x640.png'
 								label='PayU'
 								id='PayU'
 								name='paymentMethod'

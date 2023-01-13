@@ -74,7 +74,7 @@ const ProductDetail = ({ product }) => {
 	};
 
 	const buyByCartHandler = () => {
-		navigate('/cart');
+		navigate('/Modezp-Shop-Frontend/cart');
 		addToCart();
 	};
 	const addToCartHandler = () => {	
