@@ -31,6 +31,8 @@ const Home = () => {
 				<LoadingSpinner />
 			) : error ? (
 				<Message>{error}</Message>
+			) : products.length === 0 ? (
+				<div className='noproducts'>Brak produktów o podanych parametrach wyszukiwania. </div>
 			) : (
 				<>
 					<div className='products-section margin-section box-shadow'>
