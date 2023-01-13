@@ -21,7 +21,7 @@ const Menu = ({ hideMenu }) => {
 		<div className='menu box-shadow'>
 			{user ? (
 				<div className='menu-links'>
-					<Link to='/Modezp-Shop-Frontend/Modezp-Shop-Frontend/profile' className='menu-link' onClick={hideMenu}>
+					<Link to='/Modezp-Shop-Frontend/profile' className='menu-link' onClick={hideMenu}>
 						Moje Konto
 					</Link>
 					<Link

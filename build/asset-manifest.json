@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Modezp-Shop-Frontend/static/css/main.c900c461.css",
-    "main.js": "/Modezp-Shop-Frontend/static/js/main.29ed7f5c.js",
+    "main.js": "/Modezp-Shop-Frontend/static/js/main.80150a61.js",
     "static/js/787.6521655c.chunk.js": "/Modezp-Shop-Frontend/static/js/787.6521655c.chunk.js",
     "static/media/slick.svg": "/Modezp-Shop-Frontend/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/Modezp-Shop-Frontend/static/media/slick.a4e97f5a2a64f0ab1323.eot",
@@ -9,11 +9,11 @@
     "static/media/slick.woff": "/Modezp-Shop-Frontend/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/Modezp-Shop-Frontend/index.html",
     "main.c900c461.css.map": "/Modezp-Shop-Frontend/static/css/main.c900c461.css.map",
-    "main.29ed7f5c.js.map": "/Modezp-Shop-Frontend/static/js/main.29ed7f5c.js.map",
+    "main.80150a61.js.map": "/Modezp-Shop-Frontend/static/js/main.80150a61.js.map",
     "787.6521655c.chunk.js.map": "/Modezp-Shop-Frontend/static/js/787.6521655c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c900c461.css",
-    "static/js/main.29ed7f5c.js"
+    "static/js/main.80150a61.js"
   ]
 }
