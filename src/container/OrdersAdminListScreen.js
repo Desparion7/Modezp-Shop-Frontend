@@ -20,7 +20,7 @@ const OrdersAdminListScreen = () => {
 				dispatch(getOrderAdminList());
 			}
 		} else {
-			navigate('/');
+			navigate('/Modezp-Shop-Frontend');
 		}
 	}, [dispatch, navigate, userLogin]);
 
@@ -33,7 +33,7 @@ const OrdersAdminListScreen = () => {
 					<Message>{error}</Message>
 				) : (
 					<div className='margin-section'>
-						<Link to='/profile'>
+						<Link to='/Modezp-Shop-Frontend/profile'>
 							<button className='btn'>Wróć</button>
 						</Link>
 						<div className='orderslist'>
@@ -84,7 +84,7 @@ const OrdersAdminListScreen = () => {
 													)}
 												</div>
 												<div className='orderslist-body-text'>
-													<Link to={`/order/${order._id}`}>
+													<Link to={`/Modezp-Shop-Frontend/order/${order._id}`}>
 														<button className='btn-edit'>
 															<i className='fas fa-edit'></i>
 														</button>
@@ -144,7 +144,7 @@ const OrdersAdminListScreen = () => {
 											)}
 										</div>
 										<div>
-											<Link to={`/order/${order._id}`}>
+											<Link to={`/Modezp-Shop-Frontend/order/${order._id}`}>
 												<button className='btn-edit'>
 													<i className='fas fa-edit'></i>
 												</button>

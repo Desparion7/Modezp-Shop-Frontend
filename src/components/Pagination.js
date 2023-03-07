@@ -17,19 +17,19 @@ const Pagination = ({
 			if (keyword) {
 				// W przyszłośći dodać wyszukiwanie produktów w panelu administaratora
 				navigate(
-					`/admin/productslist/${keyword}/page/${e.selected + 1}`
+					`/Modezp-Shop-Frontend/admin/productslist/${keyword}/page/${e.selected + 1}`
 				);
 			} else {
-				navigate(`/admin/productslist/page/${e.selected + 1}`);
+				navigate(`/Modezp-Shop-Frontend/admin/productslist/page/${e.selected + 1}`);
 			}
 		} else {
 			if (keyword) {
-				navigate(`/search/${keyword}/page/${e.selected + 1}`);
+				navigate(`/Modezp-Shop-Frontend/search/${keyword}/page/${e.selected + 1}`);
 			} else {
 				if (category) {
-					navigate(`/category/piżamy/page/${e.selected + 1}`);
+					navigate(`/Modezp-Shop-Frontend/category/piżamy/page/${e.selected + 1}`);
 				} else {
-					navigate(`/page/${e.selected + 1}`);
+					navigate(`/Modezp-Shop-Frontend/page/${e.selected + 1}`);
 				}
 			}
 		}

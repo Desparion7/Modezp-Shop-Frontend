@@ -18,7 +18,7 @@ const LoginScreen = () => {
 
 	useEffect(() => {
 		if (userDetailsInfo) {
-			navigate('/');
+			navigate('/Modezp-Shop-Frontend');
 		}
 	}, [navigate, userDetailsInfo]);
 
@@ -78,7 +78,7 @@ const LoginScreen = () => {
 				</div>
 				<div className='rediret-box'>
 					<label>Nie masz konta?</label>
-					<Link to='/register' className='management-box-redirect-link'>
+					<Link to='/Modezp-Shop-Frontend/register' className='management-box-redirect-link'>
 						ZAREJESTRUJ SIĘ
 					</Link>
 				</div>

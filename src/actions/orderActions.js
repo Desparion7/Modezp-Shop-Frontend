@@ -8,6 +8,8 @@ import {
 } from '../store';
 import axios from 'axios';
 
+const url='https://nice-underwear-fly.cyclic.app'
+
 export const createOrder = (order) => {
 	return (dispatch, getState) => {
 		const sendRequest = async () => {
@@ -24,7 +26,7 @@ export const createOrder = (order) => {
 					},
 				};
 
-				const { data } = await axios.post(`/api/orders`, order, config);
+				const { data } = await axios.post(`${url}/api/orders`, order, config);
 
 				dispatch(orderActions.orderCreateSuccess(data));
 			} catch (error) {
@@ -55,7 +57,7 @@ export const detailsOrder = (id) => {
 					},
 				};
 
-				const { data } = await axios.get(`/api/orders/${id}`, config);
+				const { data } = await axios.get(`${url}/api/orders/${id}`, config);
 
 				dispatch(orderDetailsActions.orderDetailsSuccess(data));
 			} catch (error) {
@@ -89,7 +91,7 @@ export const orderUpdatePaid = (orderId, paymentResult) => {
 				};
 
 				const { data } = await axios.put(
-					`/api/orders/${orderId}/pay`,
+					`${url}/api/orders/${orderId}/pay`,
 					paymentResult,
 					config
 				);
@@ -127,7 +129,7 @@ export const payOrder = (orderId, paymentResult) => {
 				};
 
 				const { data } = await axios.put(
-					`/api/orders/${orderId}/pay`,
+					`${url}/api/orders/${orderId}/pay`,
 					paymentResult,
 					config
 				);
@@ -163,7 +165,7 @@ export const deliverOrder = (order) => {
 				};
 
 				const { data } = await axios.put(
-					`/api/orders/${order._id}/deliver`,
+					`${url}/api/orders/${order._id}/deliver`,
 					{},
 					config
 				);
@@ -199,7 +201,7 @@ export const getOrderUserList = () => {
 						Authorization: `Bearer ${userDetailsInfo.token}`,
 					},
 				};
-				const { data } = await axios.get(`/api/orders/myorders`, config);
+				const { data } = await axios.get(`${url}/api/orders/myorders`, config);
 
 				dispatch(ordersUserListActions.ordersUserListSuccess(data));
 			} catch (error) {
@@ -232,7 +234,7 @@ export const getOrderAdminList = () => {
 						Authorization: `Bearer ${userDetailsInfo.token}`,
 					},
 				};
-				const { data } = await axios.get(`/api/orders`, config);
+				const { data } = await axios.get(`${url}/api/orders`, config);
 
 				dispatch(ordersAdminListActions.ordersAdminListSuccess(data));
 			} catch (error) {

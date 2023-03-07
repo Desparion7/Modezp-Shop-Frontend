@@ -32,7 +32,7 @@ const Carousel = () => {
 			<Slider {...settings} className='bottom-slider margin-section'>
 				{products.map((product) => (
 					<Link
-						to={`/products/${product._id}`}
+						to={`/Modezp-Shop-Frontend/products/${product._id}`}
 						key={product._id}
 						className='link bottom-slider-products'
 					>

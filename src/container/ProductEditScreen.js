@@ -78,7 +78,7 @@ const ProductEditScreen = () => {
 					}
 				}
 			} else {
-				navigate('/');
+				navigate('/Modezp-Shop-Frontend');
 			}
 		}
 	}, [dispatch, navigate, userLogin, product, productId, updateSuccess]);
@@ -130,7 +130,7 @@ const ProductEditScreen = () => {
 
 	return (
 		<div className='margin-section change-product'>
-			<Link to='/admin/productslist'>
+			<Link to='/Modezp-Shop-Frontend/admin/productslist'>
 				<button className='btn'>Wróć</button>
 			</Link>
 			{updateLoading && <LoadingSpinner />}

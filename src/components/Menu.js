@@ -14,25 +14,25 @@ const Menu = ({ hideMenu }) => {
 		e.preventDefault();
 		dispatch(logout());
 		dispatch(userRegisterActions.userRegisterReset());
-		navigate('/');
+		navigate('/Modezp-Shop-Frontend');
 	};
 
 	return (
 		<div className='menu box-shadow'>
 			{user ? (
 				<div className='menu-links'>
-					<Link to='/profile' className='menu-link' onClick={hideMenu}>
+					<Link to='/Modezp-Shop-Frontend/profile' className='menu-link' onClick={hideMenu}>
 						Moje Konto
 					</Link>
 					<Link
-						to='/profile/orderlist'
+						to='/Modezp-Shop-Frontend/profile/orderlist'
 						className='menu-link'
 						onClick={hideMenu}
 					>
 						Moje zamówienia
 					</Link>
 					<Link
-						to='/profile/messagecenter'
+						to='/Modezp-Shop-Frontend/profile/messagecenter'
 						className='menu-link'
 						onClick={hideMenu}
 					>
@@ -43,7 +43,7 @@ const Menu = ({ hideMenu }) => {
 						onClick={(e) => {
 							logoutHandler(e);
 							hideMenu();
-							navigate('/login');
+							navigate('/Modezp-Shop-Frontend/login');
 						}}
 					>
 						Wyloguj się
@@ -51,12 +51,12 @@ const Menu = ({ hideMenu }) => {
 				</div>
 			) : (
 				<>
-					<Link to='/login'>
+					<Link to='/Modezp-Shop-Frontend/login'>
 						<button className='btn' onClick={hideMenu}>
 							Zaloguj się
 						</button>
 					</Link>
-					<Link to='/login'>
+					<Link to='/Modezp-Shop-Frontend/login'>
 						<button className='btn' onClick={hideMenu}>
 							Demo
 						</button>
@@ -64,7 +64,7 @@ const Menu = ({ hideMenu }) => {
 
 					<p>Nie masz konta?</p>
 					<Link
-						to='/register'
+						to='/Modezp-Shop-Frontend/register'
 						className='menu-link-register'
 						onClick={hideMenu}
 					>

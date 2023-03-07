@@ -27,7 +27,7 @@ const ProfileUpdateScreen = () => {
 
 	useEffect(() => {
 		if (!userDetailsInfo) {
-			navigate('/');
+			navigate('/Modezp-Shop-Frontend');
 		} else {
 			if (!user.name) {
 				dispatch(getUserDetails('profile'));
@@ -52,7 +52,7 @@ const ProfileUpdateScreen = () => {
 
 	return (
 		<div className='margin-section'>
-			<Link to='/profile'>
+			<Link to='/Modezp-Shop-Frontend/profile'>
 				<button className='btn'>Wróć</button>
 			</Link>
 
