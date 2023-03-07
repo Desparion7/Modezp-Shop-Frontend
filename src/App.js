@@ -47,7 +47,10 @@ function App() {
 						path='/Modezp-Shop-Frontend/page/:pageNumber'
 						element={<Home />}
 					></Route>
-					<Route path='/Modezp-Shop-Frontend/search/:keyword' element={<Home />}></Route>
+					<Route
+						path='/Modezp-Shop-Frontend/search/:keyword'
+						element={<Home />}
+					></Route>
 					<Route
 						path='/Modezp-Shop-Frontend/search/:keyword/page/:pageNumber'
 						element={<Home />}
@@ -61,7 +64,11 @@ function App() {
 						element={<ProductsListScreen />}
 					></Route>
 					<Route
-						path='/Modezp-Shop-Frontend/admin/productslist/page/:pageNumber'
+						path='/Modezp-Shop-Frontend/admin/productslist/search/:keyword'
+						element={<ProductsListScreen />}
+					></Route>
+					<Route
+						path='/Modezp-Shop-Frontend/admin/productslist/search/:keyword/page/:pageNumber'
 						element={<ProductsListScreen />}
 					></Route>
 					<Route
@@ -85,7 +92,10 @@ function App() {
 						element={<ProductCreateReview />}
 					></Route>
 					<Route path='/Modezp-Shop-Frontend/cart' element={<CartScreen />} />
-					<Route path='/Modezp-Shop-Frontend/shipping' element={<ShippingScreen />} />
+					<Route
+						path='/Modezp-Shop-Frontend/shipping'
+						element={<ShippingScreen />}
+					/>
 					<Route
 						path='/Modezp-Shop-Frontend/payment'
 						element={<PaymentScreen />}
@@ -99,8 +109,14 @@ function App() {
 						element={<OrderScreen />}
 					></Route>
 					<Route path='/Modezp-Shop-Frontend/login' element={<LoginScreen />} />
-					<Route path='/Modezp-Shop-Frontend/register' element={<RegisterScreen />} />
-					<Route path='/Modezp-Shop-Frontend/profile' element={<ProfileScreen />} />
+					<Route
+						path='/Modezp-Shop-Frontend/register'
+						element={<RegisterScreen />}
+					/>
+					<Route
+						path='/Modezp-Shop-Frontend/profile'
+						element={<ProfileScreen />}
+					/>
 					<Route
 						path='/Modezp-Shop-Frontend/profile/update'
 						element={<ProfileUpdateScreen />}

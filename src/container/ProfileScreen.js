@@ -79,7 +79,7 @@ const ProfileScreen = () => {
 								</Link>
 								<Link
 									className='link-on-profile'
-									to='/Modezp-Shop-Frontend/admin/productslist'
+									to='/Modezp-Shop-Frontend/admin/productslist/page/1'
 								>
 									Lista produktów {' '}
 									<i className="fa-solid fa-arrow-right"></i>

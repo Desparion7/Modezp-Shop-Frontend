@@ -15,9 +15,8 @@ const Pagination = ({
 	const pageChange = (e) => {
 		if (isAdmin) {
 			if (keyword) {
-				// W przyszłośći dodać wyszukiwanie produktów w panelu administaratora
 				navigate(
-					`/Modezp-Shop-Frontend/admin/productslist/${keyword}/page/${e.selected + 1}`
+					`/Modezp-Shop-Frontend/admin/productslist/search/${keyword}/page/${e.selected + 1}`
 				);
 			} else {
 				navigate(`/Modezp-Shop-Frontend/admin/productslist/page/${e.selected + 1}`);

@@ -38,51 +38,56 @@ const LoginScreen = () => {
 		<div className='management-box margin-section'>
 			{loading && <LoadingSpinner />}
 			{error && <Message>Nieprawidłowy email lub hasło</Message>}
-			<div className='management-container box-shadow-form'>
-				<div className='management-box-form'>
-					<h3>Panel logowania</h3>
-					<form onSubmit={submitHandler}>
-						<label htmlFor='email'>Email:</label>
-						<input
-							autoComplete='email'
-							type='email'
-							id='email'
-							name='email'
-							value={email}
-							onChange={(e) => {
-								setEmail(e.target.value);
-							}}
-						></input>
-						<label htmlFor='password'>Hasło:</label>
-						<input
-							autoComplete='password'
-							type='password'
-							id='password'
-							name='password'
-							value={password}
-							onChange={(e) => {
-								setPassword(e.target.value);
-							}}
-						></input>
-						<button className='btn btn-management' type='submit'>
-							Zaloguj się
-						</button>
-						<button
-							className='btn btn-management'
-							type='button'
-							onClick={handlerDemoLogin}
+			{!loading && (
+				<div className='management-container box-shadow-form'>
+					<div className='management-box-form'>
+						<h3>Panel logowania</h3>
+						<form onSubmit={submitHandler}>
+							<label htmlFor='email'>Email:</label>
+							<input
+								autoComplete='email'
+								type='email'
+								id='email'
+								name='email'
+								value={email}
+								onChange={(e) => {
+									setEmail(e.target.value);
+								}}
+							></input>
+							<label htmlFor='password'>Hasło:</label>
+							<input
+								autoComplete='password'
+								type='password'
+								id='password'
+								name='password'
+								value={password}
+								onChange={(e) => {
+									setPassword(e.target.value);
+								}}
+							></input>
+							<button className='btn btn-management' type='submit'>
+								Zaloguj się
+							</button>
+							<button
+								className='btn btn-management'
+								type='button'
+								onClick={handlerDemoLogin}
+							>
+								Demo
+							</button>
+						</form>
+					</div>
+					<div className='rediret-box'>
+						<label>Nie masz konta?</label>
+						<Link
+							to='/Modezp-Shop-Frontend/register'
+							className='management-box-redirect-link'
 						>
-							Demo
-						</button>
-					</form>
+							ZAREJESTRUJ SIĘ
+						</Link>
+					</div>
 				</div>
-				<div className='rediret-box'>
-					<label>Nie masz konta?</label>
-					<Link to='/Modezp-Shop-Frontend/register' className='management-box-redirect-link'>
-						ZAREJESTRUJ SIĘ
-					</Link>
-				</div>
-			</div>
+			)}
 		</div>
 	);
 };
