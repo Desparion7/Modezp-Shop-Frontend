@@ -10,8 +10,6 @@ import {
 } from '../store';
 import axios from 'axios';
 
-const url='https://nice-underwear-fly.cyclic.app'
-
 export const productsFetching = (
 	keyword = '',
 	pageNumber = '',
@@ -22,7 +20,7 @@ export const productsFetching = (
 			try {
 				dispatch(productsListActions.productsListRequest());
 				const { data } = await axios.get(
-					`${url}/api/products?keyword=${keyword}&pageNumber=${pageNumber}&category=${category}`
+					`/api/products?keyword=${keyword}&pageNumber=${pageNumber}&category=${category}`
 				);
 				dispatch(productsListActions.productsListSuccess(data));
 			} catch (error) {
@@ -44,7 +42,7 @@ export const productDetails = (id) => {
 		const sendRequest = async () => {
 			try {
 				dispatch(productDetailActions.productDetailRequest());
-				const res = await axios.get(`${url}/api/products/${id}`);
+				const res = await axios.get(`/api/products/${id}`);
 				dispatch(productDetailActions.productDetailSuccess(res.data));
 			} catch (error) {
 				dispatch(
@@ -75,7 +73,7 @@ export const productDeleteById = (id) => {
 					},
 				};
 
-				await axios.delete(`${url}/api/products/${id}`, config);
+				await axios.delete(`/api/products/${id}`, config);
 				dispatch(productDeleteActions.productDeleteSuccess());
 			} catch (error) {
 				dispatch(
@@ -107,7 +105,7 @@ export const productCreate = () => {
 					},
 				};
 
-				const { data } = await axios.post(`${url}/api/products`, {}, config);
+				const { data } = await axios.post(`/api/products`, {}, config);
 				dispatch(productCreateActions.productCreateSuccess(data));
 			} catch (error) {
 				dispatch(
@@ -140,7 +138,7 @@ export const productUpdate = (productId, product) => {
 				};
 
 				const { data } = await axios.put(
-					`${url}/api/products/${productId}`,
+					`/api/products/${productId}`,
 					product,
 					config
 				);
@@ -176,7 +174,7 @@ export const reviewCreate = (productId, review) => {
 					},
 				};
 
-				await axios.post(`${url}/api/products/${productId}/review`, review, config);
+				await axios.post(`/api/products/${productId}/review`, review, config);
 				dispatch(reviewCreateActions.reviewCreateSuccess());
 			} catch (error) {
 				dispatch(
@@ -209,7 +207,7 @@ export const checkReview = (productId) => {
 				};
 
 				const { data } = await axios.post(
-					`${url}/api/products/${productId}/check`,
+					`/api/products/${productId}/check`,
 					{},
 					config
 				);
@@ -233,7 +231,7 @@ export const topProductsFetching = () => {
 		const fetchProducts = async () => {
 			try {
 				dispatch(topProductsListActions.topProductsListRequest());
-				const { data } = await axios.get(`${url}/api/products/top`);
+				const { data } = await axios.get(`/api/products/top`);
 				dispatch(topProductsListActions.topProductsListSuccess(data));
 			} catch (error) {
 				dispatch(

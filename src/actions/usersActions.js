@@ -11,8 +11,6 @@ import {
 } from '../store';
 import store from '../store';
 
-const url='https://nice-underwear-fly.cyclic.app'
-
 export const login = (email, password) => {
 	return (dispatch) => {
 		const sendLoginRequest = async () => {
@@ -24,7 +22,7 @@ export const login = (email, password) => {
 					},
 				};
 				const { data } = await axios.post(
-					`${url}/api/users/login`,
+					'/api/users/login',
 					{
 						email,
 						password,
@@ -67,7 +65,7 @@ export const registerUser = (name, email, password) => {
 					},
 				};
 				const { data } = await axios.post(
-					`${url}/api/users`,
+					'/api/users',
 					{
 						email,
 						password,
@@ -109,7 +107,7 @@ export const getUserDetails = (id) => {
 					},
 				};
 
-				const { data } = await axios.get(`${url}/api/users/${id}`, config);
+				const { data } = await axios.get(`/api/users/${id}`, config);
 
 				dispatch(userDetailsActions.userDetailsSuccess(data));
 			} catch (error) {
@@ -143,7 +141,7 @@ export const updateUserProfile = (user) => {
 					},
 				};
 
-				const { data } = await axios.put(`${url}/api/users/profile`, user, config);
+				const { data } = await axios.put(`/api/users/profile`, user, config);
 				dispatch(userUpdateActions.userUpdateSuccess(data));
 			} catch (error) {
 				dispatch(
@@ -176,7 +174,7 @@ export const getUsersList = () => {
 					},
 				};
 
-				const { data } = await axios.get(`${url}/api/users`, config);
+				const { data } = await axios.get(`/api/users`, config);
 
 				dispatch(usersListActions.usersListSuccess(data));
 			} catch (error) {
@@ -208,7 +206,7 @@ export const deleteUser = (id) => {
 					},
 				};
 
-				await axios.delete(`${url}/api/users/${id}`, config);
+				await axios.delete(`/api/users/${id}`, config);
 
 				dispatch(userDeleteActions.userDeleteSuccess());
 			} catch (error) {
@@ -241,7 +239,7 @@ export const getUsersDetailsByAdmin = (id) => {
 					},
 				};
 
-				const { data } = await axios.get(`${url}/api/users/${id}`, config);
+				const { data } = await axios.get(`/api/users/${id}`, config);
 
 				dispatch(userDetailsByAdminActions.userDetailsByAdminSuccess(data));
 			} catch (error) {
@@ -274,7 +272,7 @@ export const updateUserByAdmin = (id, user) => {
 					},
 				};
 
-				const { data } = await axios.put(`${url}/api/users/${id}`, user, config);
+				const { data } = await axios.put(`/api/users/${id}`, user, config);
 				dispatch(userUpdateByAdminActions.userUpdateByAdminSuccess());
 				dispatch(userDetailsByAdminActions.userDetailsByAdminSuccess(data));
 			} catch (error) {
