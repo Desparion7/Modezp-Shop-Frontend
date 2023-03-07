@@ -30,91 +30,91 @@ function App() {
 			<Navbar></Navbar>
 			<main>
 				<Routes>
-					<Route path='/Modezp-Shop-Frontend' element={<Home />}></Route>
+					<Route path='/' element={<Home />}></Route>
 					<Route
-						path='/Modezp-Shop-Frontend/category/:category'
+						path='/category/:category'
 						element={<Home />}
 					></Route>
 					<Route
-						path='/Modezp-Shop-Frontend/category/:category/page/:pageNumber'
+						path='/category/:category/page/:pageNumber'
 						element={<Home />}
 					></Route>
 					<Route
-						path='/Modezp-Shop-Frontend/category/:category/search/:keyword'
+						path='/category/:category/search/:keyword'
 						element={<Home />}
 					></Route>
 					<Route
-						path='/Modezp-Shop-Frontend/page/:pageNumber'
+						path='/page/:pageNumber'
 						element={<Home />}
 					></Route>
-					<Route path='/Modezp-Shop-Frontend/search/:keyword' element={<Home />}></Route>
+					<Route path='/search/:keyword' element={<Home />}></Route>
 					<Route
-						path='/Modezp-Shop-Frontend/search/:keyword/page/:pageNumber'
+						path='/search/:keyword/page/:pageNumber'
 						element={<Home />}
 					></Route>
 					<Route
-						path='/Modezp-Shop-Frontend/admin/userslist'
+						path='/admin/userslist'
 						element={<UsersListScreen />}
 					></Route>
 					<Route
-						path='/Modezp-Shop-Frontend/admin/productslist'
+						path='/admin/productslist'
 						element={<ProductsListScreen />}
 					></Route>
 					<Route
-						path='/Modezp-Shop-Frontend/admin/productslist/page/:pageNumber'
+						path='/admin/productslist/page/:pageNumber'
 						element={<ProductsListScreen />}
 					></Route>
 					<Route
-						path='/Modezp-Shop-Frontend/admin/orderslist'
+						path='/admin/orderslist'
 						element={<OrdersAdminListScreen />}
 					></Route>
 					<Route
-						path='/Modezp-Shop-Frontend/admin/user/:id/edit'
+						path='/admin/user/:id/edit'
 						element={<UserEditScreen />}
 					></Route>
 					<Route
-						path='/Modezp-Shop-Frontend/admin/product/:id/edit'
+						path='/admin/product/:id/edit'
 						element={<ProductEditScreen />}
 					></Route>
 					<Route
-						path='/Modezp-Shop-Frontend/products/:id'
+						path='/products/:id'
 						element={<DetailLoading />}
 					></Route>
 					<Route
-						path='/Modezp-Shop-Frontend/product/review/:id'
+						path='/product/review/:id'
 						element={<ProductCreateReview />}
 					></Route>
-					<Route path='/Modezp-Shop-Frontend/cart' element={<CartScreen />} />
-					<Route path='/Modezp-Shop-Frontend/shipping' element={<ShippingScreen />} />
+					<Route path='/cart' element={<CartScreen />} />
+					<Route path='/shipping' element={<ShippingScreen />} />
 					<Route
-						path='/Modezp-Shop-Frontend/payment'
+						path='/payment'
 						element={<PaymentScreen />}
 					></Route>
 					<Route
-						path='/Modezp-Shop-Frontend/placeorder'
+						path='/placeorder'
 						element={<PlaceOrderScreen />}
 					></Route>
 					<Route
-						path='/Modezp-Shop-Frontend/order/:id'
+						path='/order/:id'
 						element={<OrderScreen />}
 					></Route>
-					<Route path='/Modezp-Shop-Frontend/login' element={<LoginScreen />} />
-					<Route path='/Modezp-Shop-Frontend/register' element={<RegisterScreen />} />
-					<Route path='/Modezp-Shop-Frontend/profile' element={<ProfileScreen />} />
+					<Route path='/login' element={<LoginScreen />} />
+					<Route path='/register' element={<RegisterScreen />} />
+					<Route path='/profile' element={<ProfileScreen />} />
 					<Route
-						path='/Modezp-Shop-Frontend/profile/update'
+						path='/profile/update'
 						element={<ProfileUpdateScreen />}
 					/>
 					<Route
-						path='/Modezp-Shop-Frontend/profile/address'
+						path='/profile/address'
 						element={<ProfileAddressScreen />}
 					/>
 					<Route
-						path='/Modezp-Shop-Frontend/profile/orderlist'
+						path='/profile/orderlist'
 						element={<OrdersUserListScreen />}
 					/>
 					<Route
-						path='/Modezp-Shop-Frontend/profile/messagecenter'
+						path='/profile/messagecenter'
 						element={<MessageCenter />}
 					/>
 				</Routes>

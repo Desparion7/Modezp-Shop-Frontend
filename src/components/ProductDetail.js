@@ -48,7 +48,6 @@ const ProductDetail = ({ product }) => {
 	const changeValueToDefault = (e) => {
 		if (e.target.value < 1) {
 			setAmountInput('1');
-			console.log(amountInput);
 		}
 		if (e.target.value > product.countInStock) {
 			setAmountInput(product.countInStock);
@@ -74,10 +73,10 @@ const ProductDetail = ({ product }) => {
 	};
 
 	const buyByCartHandler = () => {
-		navigate('/Modezp-Shop-Frontend/cart');
+		navigate('/cart');
 		addToCart();
 	};
-	const addToCartHandler = () => {	
+	const addToCartHandler = () => {
 		addToCart();
 	};
 

@@ -1,24 +1,24 @@
-import React from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { cartActions } from '../store';
 import store from '../store';
 import Checkout from '../components/Checkout';
 import './CartScreen.css';
+import Modal from '../UI/Modal';
 
 const CartScreen = () => {
 	const dispatch = useDispatch();
 	const cartItems = useSelector((state) => state.cart.cartItems);
+	const [showModal, setShowModal] = useState(false);
+	const [productIdToRemove, setProductIdToRemove] = useState('');
 
 	const fullPrice = cartItems
 		.reduce((acc, item) => acc + item.qty * item.price, 0)
 		.toFixed(2);
 
 	const updateLocalStorage = () => {
-		localStorage.setItem(
-			'cartItems',
-			JSON.stringify(store.getState().cart)
-		);
+		localStorage.setItem('cartItems', JSON.stringify(store.getState().cart));
 	};
 
 	const decrementHandler = (id) => {
@@ -51,17 +51,32 @@ const CartScreen = () => {
 			updateLocalStorage();
 		}
 	};
-	const removeHandler = (id) => {
-		dispatch(cartActions.removeItem(id));
+	const removeHandler = () => {
+		dispatch(cartActions.removeItem(productIdToRemove));
 		updateLocalStorage();
+		setShowModal(false)
+	};
+
+	const closeModalHandler = () => {
+		setShowModal(false);
 	};
 
 	return (
 		<>
+			{showModal && (
+				<Modal
+					modalTitle={'Usuwanie produktu z koszyka!'}
+					modalText={'Czy na pewno chcesz usunąć produkt?'}
+					rightBtn={removeHandler}
+					rightBtnText={'Tak'}
+					leftBtn={closeModalHandler}
+					leftBtnText={'Nie'}
+				></Modal>
+			)}
 			{cartItems.length < 1 ? (
 				<div className='empty-cart margin-section'>
-					<img src='/Modezp-Shop-Frontend/images/cart.png' alt='cart'></img>
-					<Link to='/Modezp-Shop-Frontend/'>
+					<img src='./images/cart.png' alt='cart'></img>
+					<Link to='/'>
 						<button className='btn'>Dobierz produkty</button>
 					</Link>
 				</div>
@@ -84,7 +99,7 @@ const CartScreen = () => {
 								<div className='product-name'>
 									<Link
 										className='link'
-										to={`/Modezp-Shop-Frontend/products/${product._id.substring(0, 24)}`}
+										to={`/products/${product._id.substring(0, 24)}`}
 									>
 										{product.name} {product.size}
 									</Link>
@@ -114,7 +129,11 @@ const CartScreen = () => {
 								<div className='remove-box'>
 									<i
 										className='fa-regular fa-trash-can'
-										onClick={removeHandler.bind(null, product._id)}
+										onClick={() => {
+											setShowModal(true);
+											setProductIdToRemove(product._id);
+											// removeHandler.bind(null, product._id);
+										}}
 									></i>
 								</div>
 							</div>
@@ -124,10 +143,9 @@ const CartScreen = () => {
 								Razem <span>{fullPrice} zł</span>
 							</div>
 						</div>
-						<Link to='/Modezp-Shop-Frontend/'>
+						<Link to='/'>
 							<button className='btn cart-add-products-btn'>
-								<i className='fa-solid fa-arrow-left'></i> {' '}
-								Dobierz produkty
+								<i className='fa-solid fa-arrow-left'></i> Dobierz produkty
 							</button>
 						</Link>
 					</div>
@@ -137,7 +155,7 @@ const CartScreen = () => {
 							<div>Wartość produktów: {fullPrice} zł</div>
 							<div>Dostawa od: 0,00 zł</div>
 							<div>Razem z dostawą: {fullPrice} zł</div>
-							<Link to='/Modezp-Shop-Frontend/shipping'>
+							<Link to='/shipping'>
 								<button className='btn btn-cart-screen'>
 									Dostawa i płatność
 									{'  '}

@@ -37,7 +37,7 @@ const OrderScreen = () => {
 
 	useEffect(() => {
 		if (!userLogin) {
-			navigate('/Modezp-Shop-Frontend/login');
+			navigate('/Shop/login');
 		}
 		if (!order || successPay || successDeliver) {
 			dispatch(orderPayActions.orderReset());
@@ -148,7 +148,7 @@ const OrderScreen = () => {
 										<div className='placeorder-product-name'>
 											<Link
 												className='link'
-												to={`/Modezp-Shop-Frontend/products/${product._id.substring(0, 24)}`}
+												to={`/products/${product._id.substring(0, 24)}`}
 											>
 												{product.name} {product.size}
 											</Link>

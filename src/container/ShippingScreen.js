@@ -32,7 +32,7 @@ const ShippingScreen = () => {
 	const FullPriceWithDelivery = (+fullPrice + deliveryPrice).toFixed(2);
 	useEffect(() => {
 		if (!userDetailsInfo) {
-			navigate('/Modezp-Shop-Frontend/login');
+			navigate('/login');
 		}
 		if (
 			!userDetailsInformation._id ||
@@ -94,7 +94,7 @@ const ShippingScreen = () => {
 		localStorage.setItem('cartItems', JSON.stringify(store.getState().cart));
 
 		dispatch(getUserDetails('profile'));
-		navigate('/Modezp-Shop-Frontend/payment');
+		navigate('/payment');
 	};
 
 	return (
